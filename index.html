@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Donación de Útiles Escolares</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,68 +14,100 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-      background-color: #f7f9fc;
+      background-color: #f9f9f9;
       color: #333;
+      line-height: 1.7;
     }
 
     header {
-      background: linear-gradient(to right, #2E86C1, #5DADE2);
+      background-image: url('https://images.unsplash.com/photo-1609443737183-917b84d4d0bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 60px 20px;
+      padding: 100px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      font-family: 'Lora', serif;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
 
     header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+      font-size: 1.3rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
 
     nav {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 10px 20px;
+      background-color: white;
       text-align: center;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
-      color: #2E86C1;
+      margin: 0 20px;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
+      color: #2E86C1;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #145A82;
     }
 
     section {
+      max-width: 1000px;
+      margin: auto;
       padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
     }
 
     section h2 {
       color: #2E86C1;
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 20px;
+      font-family: 'Lora', serif;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .grid img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .button {
       display: inline-block;
-      padding: 12px 24px;
+      padding: 12px 28px;
       background-color: #2E86C1;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
+      border-radius: 6px;
+      margin-top: 25px;
+      transition: background 0.3s ease;
     }
 
     .button:hover {
-      background-color: #21618C;
+      background-color: #1b5c85;
+    }
+
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
     }
 
     footer {
@@ -83,57 +115,68 @@
       color: white;
       text-align: center;
       padding: 30px 20px;
+      margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
+    @media (max-width: 768px) {
+      .grid {
+        flex-direction: column;
       }
+
       nav a {
-        display: block;
-        margin: 10px 0;
+        display: inline-block;
+        margin: 10px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Donación de Útiles Escolares</h1>
-    <p>Unidos por la educación. Ayudemos a los niños de escasos recursos a comenzar el año escolar con todo lo necesario.</p>
-  </header>
+<header>
+  <h1>Donación de Útiles Escolares</h1>
+  <p>Ayudemos a construir un futuro con educación, esperanza y solidaridad.</p>
+</header>
 
-  <nav>
-    <a href="#proposito">Propósito</a>
-    <a href="#como-ayudar">Cómo ayudar</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<nav>
+  <a href="#proposito">Propósito</a>
+  <a href="#ayudar">Cómo ayudar</a>
+  <a href="#contacto">Contacto</a>
+</nav>
 
-  <section id="proposito">
-    <h2>¿Por qué donar?</h2>
-    <p>Muchos niños no tienen acceso a los materiales escolares básicos como cuadernos, lápices, colores o mochilas. Esta campaña busca apoyar a comunidades vulnerables brindando herramientas para su formación académica y desarrollo personal.</p>
-  </section>
+<section id="proposito">
+  <div class="grid">
+    <img src="https://images.unsplash.com/photo-1625588076682-6e6c0a8ff877?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Niños felices con útiles escolares">
+    <div>
+      <h2>¿Por qué donar?</h2>
+      <p>Millones de niños en América Latina no tienen acceso a los materiales escolares más básicos. A través de esta campaña, buscamos que cada niño tenga una mochila cargada de oportunidades.</p>
+      <a class="button" href="#ayudar">¡Quiero ayudar!</a>
+    </div>
+  </div>
+</section>
 
-  <section id="como-ayudar">
-    <h2>¿Cómo puedes ayudar?</h2>
+<section id="ayudar">
+  <h2>¿Cómo puedes ayudar?</h2>
+  <div class="card">
     <ul>
-      <li>✅ Donando útiles escolares (nuevos o en buen estado).</li>
-      <li>✅ Siendo voluntario para la recolección o entrega.</li>
-      <li>✅ Difundiendo esta iniciativa entre tus contactos.</li>
+      <li>📘 Donando cuadernos, colores, lápices o mochilas.</li>
+      <li>👐 Participando como voluntario en la recolección.</li>
+      <li>📢 Difundiendo esta causa en tus redes sociales.</li>
+      <li>🤝 Convocando a empresas o amigos a apoyar.</li>
     </ul>
-    <a class="button" href="#contacto">¡Quiero ayudar!</a>
-  </section>
+    <a class="button" href="#contacto">Contáctanos</a>
+  </div>
+</section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Si deseas ser parte de esta causa o necesitas más información, escríbenos:</p>
-    <p><strong>Email:</strong> utilesconamor@gmail.com</p>
-    <p><strong>Teléfono:</strong> +57 300 123 4567</p>
-  </section>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>Si tienes preguntas o quieres colaborar, contáctanos:</p>
+  <p><strong>Email:</strong> utilesconamor@gmail.com</p>
+  <p><strong>Teléfono:</strong> +57 300 123 4567</p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Donación de Útiles Escolares | Proyecto solidario sin ánimo de lucro</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Donación de Útiles Escolares | Una iniciativa solidaria</p>
+</footer>
 
 </body>
 </html>
