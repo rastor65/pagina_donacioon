@@ -4,74 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Donación de Útiles Escolares</title>
-  <link href="https://www.freepik.es/vector-gratis/fondo-plano-regreso-escuela-utiles-escolares_28149176.htm#fromView=search&page=1&position=20&uuid=d0177d28-6c7a-47e4-b169-6b7f47823810&query=utiles+escolares" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f8f9fa;
       color: #333;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     header {
-      background-image: url('https://images.unsplash.com/photo-1609443737183-917b84d4d0bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1470&q=80');
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 100px 20px;
+      padding: 120px 20px;
       text-align: center;
     }
 
     header h1 {
       font-size: 3rem;
       font-family: 'Lora', serif;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
     }
 
     header p {
       font-size: 1.3rem;
       margin-top: 10px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
     }
 
     nav {
-      background-color: white;
-      text-align: center;
+      background: white;
       padding: 15px 0;
+      text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
     }
 
     nav a {
-      margin: 0 20px;
+      margin: 0 15px;
       text-decoration: none;
       color: #2E86C1;
       font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #145A82;
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       padding: 60px 20px;
     }
 
     section h2 {
-      color: #2E86C1;
       font-size: 2.2rem;
       margin-bottom: 20px;
+      color: #2E86C1;
       font-family: 'Lora', serif;
     }
 
@@ -90,43 +80,55 @@
 
     .button {
       display: inline-block;
-      padding: 12px 28px;
-      background-color: #2E86C1;
+      padding: 12px 24px;
+      background: #2E86C1;
       color: white;
+      border-radius: 5px;
       text-decoration: none;
-      border-radius: 6px;
-      margin-top: 25px;
+      margin-top: 20px;
       transition: background 0.3s ease;
     }
 
-    .button:hover {
-      background-color: #1b5c85;
-    }
+    .button:hover { background: #1B4F72; }
 
     .card {
-      background-color: white;
+      background: white;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    }
+
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+    }
+
+    .gallery img {
+      height: 180px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 20px;
+      border-left: 5px solid #2E86C1;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
 
     footer {
-      background-color: #2E86C1;
+      background: #2E86C1;
       color: white;
       text-align: center;
       padding: 30px 20px;
-      margin-top: 40px;
+      margin-top: 50px;
     }
 
     @media (max-width: 768px) {
-      .grid {
-        flex-direction: column;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 10px;
-      }
+      .grid { flex-direction: column; }
+      nav a { display: inline-block; margin: 10px 10px; }
     }
   </style>
 </head>
@@ -134,54 +136,79 @@
 
 <header>
   <h1>Donación de Útiles Escolares</h1>
-  <p>Ayudemos a construir un futuro con educación, esperanza y solidaridad.</p>
+  <p>Juntos construimos esperanza a través de la educación.</p>
 </header>
 
 <nav>
   <a href="#proposito">Propósito</a>
-  <a href="#ayudar">Cómo ayudar</a>
+  <a href="#colegios">Colegios</a>
+  <a href="#ayuda">Cómo ayudar</a>
+  <a href="#galeria">Galería</a>
+  <a href="#testimonios">Testimonios</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
 <section id="proposito">
   <div class="grid">
-    <img src="https://www.freepik.es/foto-gratis/chica-clase_852138.htm#fromView=search&page=1&position=5&uuid=5ab26733-dff4-4a2f-b110-5dfc0dafd88c&query=ni%C3%B1os+felices+con+utiles+escolares" alt="Niños felices con útiles escolares">
+    <img src="https://images.unsplash.com/photo-1603201667141-5a2c5be0d2ae?auto=format&fit=crop&w=800&q=80" alt="Niños con útiles">
     <div>
       <h2>¿Por qué donar?</h2>
-      <p>En muchas zonas del país, cientos de niños inician su año escolar sin los materiales básicos para aprender. Esta campaña nace con el propósito de apoyar directamente a los estudiantes de dos instituciones educativas de la ciudad de <strong>Riohacha, La Guajira</strong>:</p>
-      <ul style="margin-top: 15px; margin-left: 20px;">
-        <li>📍 <strong>Institución Educativa Madre Verónica</strong></li>
-        <li>📍 <strong>Institución Educativa Eusebio Séptimio Mary</strong></li>
-      </ul>
-      <p style="margin-top: 15px;">Con tu ayuda, podremos entregar mochilas, cuadernos, lápices y otros útiles esenciales que marcarán la diferencia en su formación académica.</p>
-      <a class="button" href="#ayudar">¡Quiero ayudar!</a>
+      <p>Muchos niños inician el año escolar sin cuadernos, lápices ni mochilas. Esta campaña busca cambiar esa realidad, entregando herramientas básicas a quienes más lo necesitan.</p>
+      <a class="button" href="#ayuda">¡Quiero ayudar!</a>
     </div>
   </div>
 </section>
 
+<section id="colegios">
+  <h2>Colegios beneficiados</h2>
+  <p>Tu donación llegará directamente a estudiantes de estas instituciones en <strong>Riohacha, La Guajira</strong>:</p>
+  <ul style="margin-left: 20px; margin-top: 10px;">
+    <li>📍 Institución Educativa Madre Verónica</li>
+    <li>📍 Institución Educativa Eusebio Séptimio Mary</li>
+  </ul>
+</section>
 
-<section id="ayudar">
+<section id="ayuda">
   <h2>¿Cómo puedes ayudar?</h2>
   <div class="card">
     <ul>
-      <li>📘 Donando cuadernos, colores, lápices o mochilas.</li>
-      <li>👐 Participando como voluntario en la recolección.</li>
-      <li>📢 Difundiendo esta causa en tus redes sociales.</li>
-      <li>🤝 Convocando a empresas o amigos a apoyar.</li>
+      <li>🎒 Donando útiles escolares (cuadernos, lápices, colores, mochilas).</li>
+      <li>📢 Compartiendo esta campaña en tus redes sociales.</li>
+      <li>🤝 Invitando a tu empresa o grupo a unirse.</li>
+      <li>🙋 Participando como voluntario en la recolección o entrega.</li>
     </ul>
     <a class="button" href="#contacto">Contáctanos</a>
   </div>
 </section>
 
+<section id="galeria">
+  <h2>Galería de inspiración</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80" alt="Niños felices">
+    <img src="https://images.unsplash.com/photo-1589820296152-c42e1f4a122a?auto=format&fit=crop&w=600&q=80" alt="Entrega de útiles">
+    <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=600&q=80" alt="Educación">
+  </div>
+</section>
+
+<section id="testimonios">
+  <h2>Testimonios</h2>
+  <div class="testimonial">
+    <p><strong>Laura, voluntaria:</strong> “Ver sonreír a un niño cuando recibe su mochila nueva es una experiencia que no tiene precio.”</p>
+  </div>
+  <div class="testimonial">
+    <p><strong>Samuel, docente:</strong> “Gracias a esta campaña, nuestros estudiantes comienzan el año con más ganas de aprender.”</p>
+  </div>
+</section>
+
 <section id="contacto">
   <h2>Contacto</h2>
-  <p>Si tienes preguntas o quieres colaborar, contáctanos:</p>
+  <p>¿Tienes preguntas, sugerencias o deseas unirte? Escríbenos:</p>
   <p><strong>Email:</strong> utilesconamor@gmail.com</p>
   <p><strong>Teléfono:</strong> +57 300 123 4567</p>
 </section>
 
 <footer>
-  <p>&copy; 2025 Donación de Útiles Escolares | Una iniciativa solidaria</p>
+  <p>&copy; 2025 Donación de Útiles Escolares | Riohacha, La Guajira</p>
 </footer>
 
 </body>
